@@ -4,7 +4,7 @@ import { useChat } from "ai/react";
 import { json } from "stream/consumers";
 
 export const ChatWrapper = ({ sessionID }: { sessionID: string }) => {
-  const { messages, handleInputChange, input } = useChat({
+  const { messages, handleInputChange, input,handleSubmit } = useChat({
     api: "/api/chat-stream",
     body: { sessionID },
   });
@@ -15,7 +15,12 @@ export const ChatWrapper = ({ sessionID }: { sessionID: string }) => {
         {JSON.stringify(messages)}
       </div>
 
-      <input onChange={handleInputChange} value={input} type="text" />
+      <form onSubmit={handleSubmit}>
+        
+        <input className="text-black" onChange={handleInputChange} value={input} type="text" />
+
+        <button type="submit">Send </button>
+      </form>
     </div>
   );
 };
