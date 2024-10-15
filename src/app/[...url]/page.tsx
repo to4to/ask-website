@@ -43,7 +43,7 @@ const Page = async ({ params }: PageProps) => {
 
 
 
-  return <ChatWrapper/>
+  return <ChatWrapper sessionID={ mockedSessions} />
 };
 
 export default Page;
