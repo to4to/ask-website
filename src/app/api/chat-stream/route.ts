@@ -11,5 +11,5 @@ export const POST = async (req: NextRequest) => {
 
     // console.log("response", response)
 
-    return aiUseChatAdapter
+    return aiUseChatAdapter(response)
 }
