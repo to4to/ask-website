@@ -1,3 +1,13 @@
-export const Messages = ({messages:MessagesProps}) => {
+
+import { Message as TMessage } from "ai/react"
+
+
+interface MessagesProps{
+    messages: TMessage[]
+}
+
+
+
+export const Messages = ({ messages: MessagesProps }) => {
     
 }
