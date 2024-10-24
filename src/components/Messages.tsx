@@ -8,6 +8,8 @@ interface MessagesProps{
 
 
 
-export const Messages = ({ messages: MessagesProps }) => {
-    
+export const Messages = ({ messages }: MessagesProps ) => {
+    return (
+        <div className=" flex max-h-[calc(100vh-3.5rem-7rem)]"></div>
+    )
 }
